@@ -1,26 +1,25 @@
 # Desafio Bootcamp Santander 2025: Funções de um Carro
 
-Este projeto foi desenvolvido para cumprir um desafio do Bootcamp Santander 2025.
+Este projeto foi desenvolvido para cumprir o desafio do Bootcamp Santander 2025, simulando as principais funções de um carro em um ambiente de console interativo.
 
-## Desafio
+## Sobre o Projeto
 
-Escreva um código onde controlamos as funções de um carro. O carro deve possuir as seguintes funções:
+Aqui, o usuário pode criar um carro informando modelo, cor e ano, e então controlar suas funções por meio de um menu interativo. É possível ligar/desligar, acelerar, frear, trocar marchas, virar para esquerda/direita e verificar a velocidade, sempre respeitando as regras de segurança e funcionamento de um veículo real.
 
-- Ligar o carro
-- Desligar o carro
-- Acelerar
-- Diminuir velocidade
-- Virar para esquerda/direita
-- Verificar velocidade
-- Trocar a marcha
+## Como funciona
 
-### Regras de Implementação
+- **Menu interativo:** O usuário navega por um menu no terminal, podendo executar quantas ações quiser até optar por sair do programa.
+- **Painel de marchas:** Ao escolher trocar marcha, um submenu permite selecionar a marcha desejada, respeitando as regras de não pular marchas e limites de velocidade.
+- **Mensagens informativas:** O sistema informa sempre que uma ação não é permitida, explicando o motivo (ex: tentar acelerar em ponto morto, trocar marcha fora do limite de velocidade, etc).
+- **Validações:** Todas as funções do carro só podem ser executadas se o carro estiver ligado e dentro das condições corretas.
 
-- Quando o carro for criado ele deve começar desligado, em ponto morto e com sua velocidade em 0.
-- O carro desligado não pode realizar nenhuma função.
-- Quando o carro for acelerado ele deve incrementar 1km em sua velocidade (máximo 120km/h).
-- Ao diminuir a velocidade, decrementar 1km (mínimo 0km/h).
-- O carro deve possuir 6 marchas e não é permitido pular marchas.
+## Regras de Implementação
+
+- O carro inicia desligado, em ponto morto e com velocidade 0.
+- Carro desligado não executa funções.
+- Acelerar incrementa 1km/h (máx. 120km/h).
+- Frear decrementa 1km/h (mín. 0km/h).
+- 6 marchas, não pode pular marchas.
 - Limites de velocidade por marcha:
     - Marcha 0 (ponto morto): não pode acelerar
     - 1ª marcha: 0km/h a 20km/h
@@ -29,8 +28,18 @@ Escreva um código onde controlamos as funções de um carro. O carro deve possu
     - 4ª marcha: 61km/h a 80km/h
     - 5ª marcha: 81km/h a 100km/h
     - 6ª marcha: 101km/h a 120km/h
-- O carro pode ser desligado apenas se estiver em ponto morto (marcha 0) e velocidade 0km/h.
-- Só pode virar para esquerda/direita se a velocidade estiver entre 1km/h e 40km/h.
+- Só pode desligar em ponto morto e velocidade 0.
+- Só pode virar se a velocidade estiver entre 1km/h e 40km/h.
+
+---
+
+## Pontos de Melhoria e Funcionalidades Extras
+
+- **Enum para marcha:** Usei um enum para representar as marchas, deixando o código mais organizado, seguro e fácil de manter.
+- **Painel de marchas dedicado:** O usuário pode acessar um painel exclusivo para troca de marchas, facilitando a navegação e evitando erros.
+- **Validação detalhada:** O sistema informa exatamente por que uma ação não pode ser realizada, melhorando a experiência do usuário.
+- **Estrutura modular:** O código está organizado em classes separadas (`Carro` e `App`), facilitando futuras expansões e manutenções.
+- **Possibilidade de expansão:** A estrutura permite adicionar facilmente novas funções, como buzina, faróis, etc.
 
 ---
 
@@ -42,5 +51,4 @@ Escreva um código onde controlamos as funções de um carro. O carro deve possu
 
 ---
 
-Projeto desenvolvido para fins educacionais.
-
+### **Projeto criado para estudo e aprimoramento de habilidades em Java e programação orientada a objetos.**
